@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Water point check</title>
+  <desc id="desc">A water container and measurement marker for a field check.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#d8eef0"/><stop offset="1" stop-color="#d9e6bb"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 430c170-45 290 15 450-5 170-22 250-4 350 28v147H0Z" fill="#799c65"/>
+  <rect x="275" y="235" width="240" height="225" rx="28" fill="#e6f5f5" stroke="#3c7280" stroke-width="12"/>
+  <path d="M320 330h150M320 375h150M320 420h150" stroke="#69a8b5" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="520" cy="245" r="50" fill="#f3bc6b" opacity=".85"/>
+  <text x="42" y="554" fill="#fff" font-family="Arial,sans-serif" font-size="24" letter-spacing="3">DEMO MEDIA · WATER POINT</text>
+</svg>

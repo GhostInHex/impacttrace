@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Late field visit</title>
+  <desc id="desc">A field notebook beside a row of young trees.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="1" y2="0"><stop offset="0" stop-color="#d6e8c3"/><stop offset="1" stop-color="#f3d6a1"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 420c190-55 300 8 455-12 155-20 240-5 345 35v157H0Z" fill="#648c54"/>
+  <g fill="#3d7950"><circle cx="190" cy="275" r="78"/><circle cx="330" cy="250" r="90"/><circle cx="470" cy="280" r="78"/></g>
+  <rect x="90" y="360" width="260" height="150" rx="12" fill="#f7efd7" stroke="#8b5e43" stroke-width="10" transform="rotate(-7 90 360)"/>
+  <path d="M135 420h160M130 458h130" stroke="#a87b55" stroke-width="10" stroke-linecap="round" transform="rotate(-7 90 360)"/>
+  <text x="42" y="554" fill="#fff" font-family="Arial,sans-serif" font-size="24" letter-spacing="3">DEMO MEDIA · WEEK 10</text>
+</svg>

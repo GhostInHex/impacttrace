@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Community planting day</title>
+  <desc id="desc">A stylized group of people planting trees.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8d9a7"/>
+      <stop offset="1" stop-color="#9ac59d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 390c170-60 300 5 420-28 180-50 260-20 380 18v220H0Z" fill="#47734a"/>
+  <g fill="#f1b58d">
+    <circle cx="185" cy="270" r="35"/><circle cx="300" cy="235" r="35"/><circle cx="480" cy="250" r="35"/><circle cx="620" cy="290" r="35"/>
+  </g>
+  <g fill="#f3eee0">
+    <path d="M130 440c0-95 25-145 55-145s55 50 55 145Z"/><path d="M245 435c0-115 27-170 55-170s55 55 55 170Z"/><path d="M425 440c0-95 25-145 55-145s55 50 55 145Z"/><path d="M565 455c0-110 25-160 55-160s55 50 55 160Z"/>
+  </g>
+  <g fill="#315b3b"><path d="M102 420h200v18H102z"/><path d="M408 420h210v18H408z"/></g>
+  <text x="42" y="554" fill="#fff" font-family="Arial,sans-serif" font-size="24" letter-spacing="3">DEMO MEDIA · COMMUNITY</text>
+</svg>

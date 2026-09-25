@@ -14,7 +14,7 @@ Complete the remaining MVP tickets in dependency order until the project support
 - Repository: `C:\Users\vinay\Documents\AI\hackathon\codecubicle`
 - Branch: `master`
 - Git history: baseline commits exist; ticket commits are created after each review checkpoint
-- Next frontier: ticket 03 — Upload and analyze a media batch
+- Next frontier: ticket 04 — Group evidence with OpenRouter
 - Existing app: Next.js App Router project
 - Existing validation commands:
   - `npm run typecheck`
@@ -26,6 +26,7 @@ Complete the remaining MVP tickets in dependency order until the project support
 ## Progress log
 
 - Ticket 02 completed: Cloudinary upload boundary, source metadata preservation, visible analysis phases, and recoverable failures.
+- Ticket 03 completed: multi-file selection, twelve-asset enforcement, independent progress, video transcript signals, and demo batch media.
 
 ## Commit policy
 

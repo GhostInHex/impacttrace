@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Young tree canopy</title>
+  <desc id="desc">A stylized row of leafy trees after follow-up care.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b6d8d0"/><stop offset="1" stop-color="#f4e0ad"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 450c190-50 280 10 440-12 170-24 250-4 360 30v132H0Z" fill="#477849"/>
+  <g fill="#34734b"><circle cx="180" cy="275" r="105"/><circle cx="310" cy="240" r="125"/><circle cx="470" cy="270" r="110"/><circle cx="620" cy="250" r="90"/></g>
+  <g stroke="#6a4b36" stroke-width="16"><path d="M180 350v120M310 360v120M470 355v120M620 335v140"/></g>
+  <text x="42" y="554" fill="#fff" font-family="Arial,sans-serif" font-size="24" letter-spacing="3">DEMO MEDIA · WEEK 06</text>
+</svg>

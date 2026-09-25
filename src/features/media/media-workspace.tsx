@@ -33,6 +33,7 @@ const maxAssets = 12;
 
 function makeLocalAsset(projectId: string, file: File): MediaAsset {
   const kind = getMediaKindFromMimeType(file.type) ?? "image";
+  const sourceUrl = URL.createObjectURL(file);
   const analysis: MediaAnalysis = {
     tags: ["field media", "needs review"],
     caption: "Local preview available while Cloudinary is unavailable.",
@@ -48,8 +49,8 @@ function makeLocalAsset(projectId: string, file: File): MediaAsset {
     filename: file.name,
     kind,
     publicId: "",
-    sourceUrl: URL.createObjectURL(file),
-    previewUrl: URL.createObjectURL(file),
+    sourceUrl,
+    previewUrl: sourceUrl,
     status: "queued",
     progress: 0,
     size: file.size,
@@ -74,10 +75,11 @@ function getStatusVariant(status: MediaAsset["status"]) {
 function AssetPreview({ asset }: { asset: MediaAsset }) {
   if (asset.kind === "image" && asset.sourceUrl) {
     return (
-      <img
-        src={asset.sourceUrl}
-        alt={`Source preview for ${asset.filename}`}
-        className="aspect-[4/3] w-full rounded-xl bg-muted object-cover"
+      <div
+        role="img"
+        aria-label={`Source preview for ${asset.filename}`}
+        className="aspect-[4/3] w-full rounded-xl bg-muted bg-cover bg-center"
+        style={{ backgroundImage: `url("${asset.sourceUrl}")` }}
       />
     );
   }

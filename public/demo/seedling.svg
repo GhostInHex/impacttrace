@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Seedling in a field plot</title>
+  <desc id="desc">A stylized green seedling in warm soil.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#dcefe1"/>
+      <stop offset="1" stop-color="#f7f1dc"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#80533b"/>
+      <stop offset="1" stop-color="#4d342b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="650" cy="120" r="90" fill="#fff5c8" opacity=".7"/>
+  <path d="M0 420c180-50 300 15 460-5 170-22 240-4 340 30v155H0Z" fill="url(#soil)"/>
+  <path d="M390 430c-5-120 2-196 12-255" fill="none" stroke="#285b3b" stroke-width="18" stroke-linecap="round"/>
+  <path d="M398 300c-80-30-130-8-162 47 77 18 125 4 162-47Z" fill="#4f9a58"/>
+  <path d="M407 262c68-55 129-47 170 0-63 39-121 36-170 0Z" fill="#2f7c4a"/>
+  <path d="M334 473c90-24 191-24 282 0" fill="none" stroke="#b5825e" stroke-width="9" stroke-linecap="round" opacity=".7"/>
+  <text x="42" y="554" fill="#fff" font-family="Arial,sans-serif" font-size="24" letter-spacing="3">DEMO MEDIA · PLOT A</text>
+</svg>
