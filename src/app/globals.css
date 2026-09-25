@@ -184,3 +184,55 @@
     transform: none !important;
   }
 }
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: white !important;
+    color: #111 !important;
+  }
+
+  .print-hidden,
+  [data-slot="toaster"] {
+    display: none !important;
+  }
+
+  [data-testid="impact-report"] {
+    max-width: none;
+  }
+
+  [data-testid="impact-report"] h1,
+  [data-testid="impact-report"] h2,
+  [data-testid="impact-report"] h3 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  [data-testid="impact-report"] table {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  [data-testid="impact-report"] thead {
+    display: table-header-group;
+  }
+
+  [data-testid="impact-report"] tr,
+  [data-testid="impact-report"] li,
+  [data-testid="impact-report"] p {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  [data-testid="impact-report"] a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  [data-testid="impact-report"] .overflow-x-auto {
+    overflow: visible;
+  }
+}

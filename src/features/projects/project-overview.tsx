@@ -16,6 +16,7 @@ import { useProjectStore } from "@/features/projects/project-store";
 import { MediaWorkspace } from "@/features/media/media-workspace";
 import { EvidenceWorkspace } from "@/features/evidence/evidence-workspace";
 import { ReviewWorkspace } from "@/features/review/review-workspace";
+import { ReportWorkspace } from "@/features/report/report-workspace";
 
 type WorkspaceView = "media" | "organize" | "review" | "report";
 
@@ -138,6 +139,8 @@ export function ProjectOverview({ projectId }: { projectId: string }) {
                     project={project}
                     onReport={() => setActiveView("report")}
                   />
+                ) : activeView === "report" ? (
+                  <ReportWorkspace project={project} />
                 ) : (
                   <div className="rounded-2xl border bg-muted/20 p-6 text-sm leading-6 text-muted-foreground">
                     <p className="font-semibold text-foreground">The next workspace is coming next.</p>

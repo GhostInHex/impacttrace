@@ -23,6 +23,7 @@ export type ReportRequest = {
     ocr: string;
     transcript: string;
     confidence: number;
+    reviewConfirmed: boolean;
   }>;
   evidenceGroups: Array<{
     id: string;
@@ -30,6 +31,7 @@ export type ReportRequest = {
     summary: string;
     assetIds: string[];
     confidence: number;
+    reviewStatus: "suggested" | "confirmed" | "rejected";
   }>;
   timeline: Array<{
     id: string;
@@ -38,6 +40,7 @@ export type ReportRequest = {
     description: string;
     assetIds: string[];
     confidence: number;
+    reviewStatus: "suggested" | "confirmed" | "rejected";
   }>;
   beforeAfterPairs: Array<{
     id: string;
@@ -45,6 +48,6 @@ export type ReportRequest = {
     afterAssetId: string;
     caption: string;
     confidence: number;
+    reviewStatus: "suggested" | "confirmed" | "rejected";
   }>;
 };
-
