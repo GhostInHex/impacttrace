@@ -1,6 +1,6 @@
 # Persistent Goal — Cloudinary + OpenRouter Impact Media MVP
 
-Status: in_progress
+Status: completed
 Source: `.scratch/cloudinary-impact-mvp/spec.md`
 Execution: tickets 02 → 03 → 04 → 05 → 06 → 07
 Ticket 01 is already complete and must not be reimplemented.
@@ -14,7 +14,7 @@ Complete the remaining MVP tickets in dependency order until the project support
 - Repository: `C:\Users\vinay\Documents\AI\hackathon\codecubicle`
 - Branch: `master`
 - Git history: baseline commits exist; ticket commits are created after each review checkpoint
-- Next frontier: ticket 07 — Complete the demo journey and documentation
+- Next frontier: none — all MVP tickets are complete
 - Existing app: Next.js App Router project
 - Existing validation commands:
   - `npm run typecheck`
@@ -30,6 +30,7 @@ Complete the remaining MVP tickets in dependency order until the project support
 - Ticket 04 completed: compact OpenRouter metadata request, validated JSON suggestions, and manual continuation without retries.
 - Ticket 05 completed: persisted confirm/reject/edit review for tags, evidence groups, timeline events, and before/after pairs.
 - Ticket 06 completed: one-request Markdown report generation, missing-evidence safeguards, semantic report view, and print/PDF styling.
+- Ticket 07 completed: one-click demo scenarios, setup documentation, responsive/accessibility coverage, and final validation.
 
 ## Commit policy
 

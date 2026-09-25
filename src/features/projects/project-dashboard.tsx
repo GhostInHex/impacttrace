@@ -4,6 +4,7 @@ import { ProjectForm } from "@/features/projects/project-form";
 import { ProjectHeader } from "@/features/projects/project-header";
 import { ProjectList } from "@/features/projects/project-list";
 import { useProjectStore } from "@/features/projects/project-store";
+import { DemoScenarioPicker } from "@/features/projects/demo-scenario-picker";
 
 export function ProjectDashboard() {
   const projects = useProjectStore((state) => state.projects);
@@ -17,6 +18,7 @@ export function ProjectDashboard() {
         </div>
         <div className="order-1 min-w-0 lg:order-2">
           <ProjectForm />
+          <DemoScenarioPicker />
         </div>
       </main>
     </div>
