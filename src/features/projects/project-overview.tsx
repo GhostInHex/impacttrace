@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, CalendarDays, HardDrive, MapPin } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -12,11 +13,15 @@ import {
   getProjectCategoryLabel,
 } from "@/features/projects/project";
 import { useProjectStore } from "@/features/projects/project-store";
+import { MediaWorkspace } from "@/features/media/media-workspace";
+
+type WorkspaceView = "media" | "organize" | "review" | "report";
 
 export function ProjectOverview({ projectId }: { projectId: string }) {
   const project = useProjectStore((state) =>
     state.projects.find((candidate) => candidate.id === projectId),
   );
+  const [activeView, setActiveView] = useState<WorkspaceView>("media");
 
   return (
     <div className="min-h-dvh bg-background">
@@ -90,6 +95,52 @@ export function ProjectOverview({ projectId }: { projectId: string }) {
                 {project.description}
               </p>
             </section>
+
+            <Separator className="my-7" />
+
+            <div className="print-hidden">
+              <nav aria-label="Project workflow" className="flex flex-wrap gap-2">
+                {([
+                  ["media", "1. Media journal"],
+                  ["organize", "2. Organize evidence"],
+                  ["review", "3. Review & timeline"],
+                  ["report", "4. Impact report"],
+                ] as const).map(([view, label]) => (
+                  <button
+                    key={view}
+                    type="button"
+                    onClick={() => setActiveView(view)}
+                    aria-current={activeView === view ? "page" : undefined}
+                    className={`rounded-full border px-3 py-2 text-left text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:text-sm ${activeView === view ? "border-primary bg-primary text-primary-foreground" : "bg-card text-muted-foreground hover:bg-muted hover:text-foreground"}`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </nav>
+
+              <div className="mt-7">
+                {activeView === "media" ? (
+                  <MediaWorkspace
+                    projectId={project.id}
+                    category={project.category}
+                    assets={project.mediaAssets}
+                    onContinue={() => setActiveView("organize")}
+                  />
+                ) : (
+                  <div className="rounded-2xl border bg-muted/20 p-6 text-sm leading-6 text-muted-foreground">
+                    <p className="font-semibold text-foreground">The next workspace is coming next.</p>
+                    <p className="mt-2">Organize evidence, review suggestions, and generate a traceable impact report from this project.</p>
+                    <button
+                      type="button"
+                      className="mt-4 rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      onClick={() => setActiveView("media")}
+                    >
+                      Back to media journal
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
           </article>
         ) : (
           <Alert variant="destructive" className="mt-5">

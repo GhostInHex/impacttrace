@@ -24,7 +24,7 @@ import {
   emptyProjectDraft,
   projectCategories,
   validateProjectDraft,
-  type Project,
+  createProject,
   type ProjectCategory,
   type ProjectDraft,
   type ProjectErrors,
@@ -71,7 +71,7 @@ export function ProjectForm() {
       return;
     }
 
-    const project: Project = {
+    const project = createProject({
       id: crypto.randomUUID(),
       name: draft.name.trim(),
       category: draft.category as ProjectCategory,
@@ -79,7 +79,7 @@ export function ProjectForm() {
       startDate: draft.startDate,
       endDate: draft.endDate,
       description: draft.description.trim(),
-    };
+    });
 
     addProject(project);
     toast.success("Project saved on this device");

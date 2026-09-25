@@ -1,3 +1,11 @@
+import type { ImpactReport } from "@/features/report/report";
+import type {
+  EvidenceGrouping,
+  ReviewState,
+} from "@/features/evidence/evidence";
+import type { MediaAsset } from "@/features/media/media";
+import { createReviewState } from "@/features/evidence/evidence";
+
 export const projectCategories = [
   { value: "tree-plantation", label: "Tree plantation" },
   { value: "water-conservation", label: "Water conservation" },
@@ -14,6 +22,10 @@ export type Project = {
   startDate: string;
   endDate: string;
   description: string;
+  mediaAssets: MediaAsset[];
+  grouping: EvidenceGrouping | null;
+  review: ReviewState;
+  report: ImpactReport | null;
 };
 
 export type ProjectDraft = {
@@ -86,4 +98,35 @@ export function formatProjectDate(date: string) {
     year: "numeric",
     timeZone: "UTC",
   }).format(new Date(`${date}T00:00:00Z`));
+}
+
+export function createProject(input: {
+  id: string;
+  name: string;
+  category: ProjectCategory;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}): Project {
+  return {
+    ...input,
+    mediaAssets: [],
+    grouping: null,
+    review: createReviewState(),
+    report: null,
+  };
+}
+
+export function normalizeProject(project: Project): Project {
+  return {
+    ...project,
+    mediaAssets: project.mediaAssets ?? [],
+    grouping: project.grouping ?? null,
+    review: {
+      ...createReviewState(),
+      ...(project.review ?? {}),
+    },
+    report: project.report ?? null,
+  };
 }
