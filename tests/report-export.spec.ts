@@ -36,6 +36,7 @@ test("coordinator generates one complete report and can print it", async ({ page
   for (const heading of ["Summary", "Timeline", "Evidence table", "Before / after", "Recommendations", "Source links"]) {
     await expect(page.getByRole("heading", { name: heading, exact: true })).toBeVisible();
   }
+  await expect(page.getByTestId("impact-report").getByRole("link", { name: "plot-a-seedling.jpg" }).first()).toBeVisible();
   await expect(page.getByText("Not enough evidence", { exact: true }).first()).toBeVisible();
   expect(reportRequests).toBe(1);
 

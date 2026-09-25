@@ -19,10 +19,10 @@ import type { Project } from "@/features/projects/project";
 import { useProjectStore } from "@/features/projects/project-store";
 
 function renderInlineMarkdown(value: string): ReactNode[] {
-  const parts = value.split(/(\[[^\]]+\]\(https?:\/\/[^)]+\))/g);
+  const parts = value.split(/(\[[^\]]+\]\((?:https?:\/\/|\/)[^)]+\))/g);
 
   return parts.map((part, index) => {
-    const match = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/);
+    const match = part.match(/^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)$/);
     if (match) {
       return (
         <a key={`${match[2]}-${index}`} href={match[2]} target="_blank" rel="noreferrer" className="font-medium underline underline-offset-4 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
@@ -189,4 +189,3 @@ export function ReportWorkspace({ project }: { project: Project }) {
     </section>
   );
 }
-
