@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     });
   }
 
-  const model = process.env.OPENROUTER_GROUP_MODEL ?? "google/gemini-2.0-flash-001";
+  const model = process.env.OPENROUTER_GROUP_MODEL ?? "google/gemini-2.5-flash-lite";
   const systemPrompt = `You organize sustainability field evidence. Return one JSON object only, with keys evidenceGroups, timeline, and beforeAfterPairs. Every item must use only the supplied asset IDs. Each item needs an id, concise title or caption, an assetIds array, and confidence from 0 to 1. Timeline items also need date and description. Do not invent dates, outcomes, or evidence.`;
   let response: Response;
 
