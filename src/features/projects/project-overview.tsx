@@ -14,6 +14,7 @@ import {
 } from "@/features/projects/project";
 import { useProjectStore } from "@/features/projects/project-store";
 import { MediaWorkspace } from "@/features/media/media-workspace";
+import { EvidenceWorkspace } from "@/features/evidence/evidence-workspace";
 
 type WorkspaceView = "media" | "organize" | "review" | "report";
 
@@ -125,6 +126,11 @@ export function ProjectOverview({ projectId }: { projectId: string }) {
                     category={project.category}
                     assets={project.mediaAssets}
                     onContinue={() => setActiveView("organize")}
+                  />
+                ) : activeView === "organize" ? (
+                  <EvidenceWorkspace
+                    project={project}
+                    onReview={() => setActiveView("review")}
                   />
                 ) : (
                   <div className="rounded-2xl border bg-muted/20 p-6 text-sm leading-6 text-muted-foreground">
