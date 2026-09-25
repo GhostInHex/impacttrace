@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1788070621059",
+    "name": "Logitech",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1788070619277_e5fei3.webp",
+    "website": "https://www.logitech.com/en-in",
+    "description": null,
+    "type": "sponsor",
+    "partnership_type": "Experience Partner",
+    "order": 0
+  },
+  {
+    "id": "1788095514941",
+    "name": "Wayzyy",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1788095511403_jurv6u.webp",
+    "website": "https://wayzyy.com/",
+    "description": null,
+    "type": "partner",
+    "partnership_type": "Travel Partner",
+    "order": 1
+  },
+  {
+    "id": "1787938824392",
+    "name": "Qdrant",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1787938822373_dgn1d1.webp",
+    "website": "https://qdrant.tech/",
+    "description": "",
+    "type": "partner",
+    "partnership_type": "Technology Partner",
+    "order": 2
+  },
+  {
+    "id": "1788095967753",
+    "name": "Pathway",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1788095962760_nfb92u.webp",
+    "website": "https://pathway.com/",
+    "description": null,
+    "type": "partner",
+    "partnership_type": "Technology Partner",
+    "order": 3
+  },
+  {
+    "id": "1789035025423",
+    "name": "n8n",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1789035023866_pfmbj7.webp",
+    "website": "https://n8n.io/",
+    "description": null,
+    "type": "partner",
+    "partnership_type": "License Partner",
+    "order": 4
+  },
+  {
+    "id": "1789035061346",
+    "name": "Cloudinary",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1789035059908_ed8dpp.webp",
+    "website": "https://cloudinary.com/",
+    "description": null,
+    "type": "sponsor",
+    "partnership_type": "Track Sponsor",
+    "order": 5
+  },
+  {
+    "id": "1789056541250",
+    "name": "Eventopia",
+    "logo": "https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/sponsor_1789056586375_b7h8un.webp",
+    "website": "https://eventopia.in/",
+    "description": "",
+    "type": "partner",
+    "partnership_type": "Media Partner",
+    "order": 6
+  }
+]

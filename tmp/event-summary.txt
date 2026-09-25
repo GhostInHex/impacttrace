@@ -1,0 +1,221 @@
+EVENT
+_id: 6a9084220579dffec28137de
+name: Code Cubicle 6.0
+tagline: Where Builders ship from the Office Cubicle
+type: hackathon
+industry: technology
+mode: hybrid
+min_team_size: 1
+max_team_size: 4
+start_datetime: 2026-08-27T18:36:00Z
+end_datetime: 2026-10-11T12:30:00Z
+created_at: 2026-08-27T18:38:26.697000Z
+updated_at: 2026-09-22T19:44:42.122000Z
+organizer_name: Geek Room
+slug: code-cubicle-6-0
+total_participants: 3700
+total_views: 25649
+is_registration_open: False
+is_completed: False
+is_winners_announced: None
+
+ABOUT
+**Where Builders Take Their Cubicles and Build**
+
+Code Cubicle 6.0 is back – bigger, bolder, and built for the next generation of **creators, coders, and problem-solvers**.
+
+For this edition, office cubicles become **innovation labs**, giving teams a space to pick a meaningful problem, experiment with ideas, and build something real.
+
+Whether you're building with **AI**, developing a product, designing a solution, or exploring something completely new, Code Cubicle 6.0 gives you the platform to turn your ideas into working solutions.
+
+### <span style="color: #343232">WHAT TO EXPECT</span>
+
+- Build and experiment with **real-world solutions**.
+- Collaborate with fellow **builders, creators, and innovators**.
+- Explore technologies including **AI, software, and emerging technologies**.
+- Showcase your solution through the **hackathon's evaluation rounds**.
+- Compete for the opportunity to reach the **Final Round** and be among the **top 3 teams**.
+
+**Bring an idea. Enter a cubicle. Build something that matters.**
+
+LOCATION
+name: Paytm, Noida
+address: One Skymark, Floor No.6 to 22, Tower-D, Plot no H-10 B, Sector 98, Noida, Uttar Pradesh 201304, India
+coordinates: [77.3612574, 28.5324297]
+place_id: ChIJffiYu3TlDDkR3NQsZV6hSfU
+
+ELIGIBILITY
+- Students, developers, engineers, AI builders, and working professionals can participate.
+- Participants can join individually or as part of a team.
+- Each team can have **1–4 members**.
+- Participants must complete the registration process before the deadline.
+- Participants must be available to attend the **Final Round offline at Paytm, Noida** if selected.
+- There are no specific academic or professional background requirements to participate.
+
+REGISTRATION QUESTIONS
+- [url] Your LinkedIn profile link required=True desc=None
+- [url] Your GitHub profile link required=True desc=None
+- [text] Your College Name and Year. If working professional, please mention company name: required=True desc=None
+- [text] It's compulsory to register here before submitting.  required=True desc=Link: https://codekitchen.aim.media/signup?c=mb_agency2  
+
+In the company name just mention where you have interned or worked or just fill Geek Room if you haven't worked with any company. Answer below with **Done**, we will verify it. Thank you
+
+PHASES
+- Registration: 2026-08-29T03:30:00Z -> 2026-09-20T16:39:00Z type=registration offline=False elimination=False
+  desc: Hackathon registration period
+- Team Formation: 2026-08-29T03:30:00Z -> 2026-09-20T18:29:00Z type=team_formation offline=False elimination=True
+  desc: Form teams and collaborate with other participants
+- Project Submission: 2026-09-20T18:30:00Z -> 2026-09-30T18:29:00Z type=submission offline=False elimination=True
+  desc: Teams will get selected based on Github and Linkedin profiles that will present in this elimination round to compete for the final round. Around 15-20 teams will be selected for the final round. 
+  submission: [url] Github link of the Project required=True
+  submission: [url] Demo Video Link required=False
+  submission: [file] PPT File required=False
+- Final Round: 2026-10-11T03:30:00Z -> 2026-10-11T12:30:00Z type=submission offline=True elimination=True
+  desc: Final Round of the hackathon. Top 3 winners will be selected.
+
+THEMES / PROBLEMS
+Theme: AI-Powered Intelligence for the Real World
+Build AI systems that go beyond chatbots and demos to solve real-world problems using data, media, and edge intelligence. Create products that can collect and understand information, make intelligent decisions, search and reason over knowledge, process rich media, or operate locally where connectivity and latency matter.
+
+The goal is simple: turn real-world data into actionable intelligence using AI.
+  * AI-Powered Impact & Sustainability Media Platform
+    The challenge is to build an AI-powered media intelligence platform using Cloudinary that can understand field media, organize evidence by project, location, and timeline, and help teams turn visual data into reliable insights and impact stories.
+    file: https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/problem_explanation_3xx3jsbq9p1.pdf
+  * AI-Powered Data Intelligence Platform
+    The challenge is to build an AI-powered data intelligence platform where users can describe what they need in plain English. The AI should understand the request, dynamically create and execute an appropriate data-collection workflow, gather information from permitted sources, process and validate the data, and present the results through a centralized dashboard.
+    file: https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/problem_explanation_5wtdx1p941f.pdf
+  * AI-Powered Edge Memory & Intelligence Platform
+    The challenge is to build an AI-powered edge intelligence platform that uses Qdrant Edge to provide local semantic memory and retrieval, while intelligently managing the relationship between on-device data and centralized cloud knowledge.
+    file: https://hackcultureplatform.blob.core.windows.net/event-assets/hackathons/6a9084220579dffec28137de/problem_explanation_piovxkhlbtb.pdf
+
+PARTNERS
+- Logitech (Experience Partner) https://www.logitech.com/en-in
+- Wayzyy (Travel Partner) https://wayzyy.com/
+- Qdrant (Technology Partner) https://qdrant.tech/
+- Pathway (Technology Partner) https://pathway.com/
+- n8n (License Partner) https://n8n.io/
+- Cloudinary (Track Sponsor) https://cloudinary.com/
+- Eventopia (Media Partner) https://eventopia.in/
+
+PRIZES
+- Cloudinary Challenge First Prize: 120000 INR (cash); max=1; sponsor=Cloudinary; Awarded to the best overall project for Cloudinary Challenge that is open for all.
+- Cloudinary Challenge Second Prize: 40000 INR (cash); max=1; sponsor=Cloudinary; Awarded to the second best overall project for Cloudinary Challenge that is open for all.
+- CC 6.0 General 1st Prize: 12000 INR (cash); max=1; sponsor=Geek Room; Awarded for the first prize of the general problem statement winners.
+- Omnidimension Voice AI Credits: 50 USD (credits); max=100; sponsor=Omnidimension; AI credits to help winners continue building and scaling their projects.
+- Exclusive Goodies: 50 USD (other); max=10; sponsor=Geek Room; Exclusive hackathon goodies for selected winning participants.
+- Logitech Mouse: 100 USD (other); max=5; sponsor=Logitech; Top participants will receive Logitech Wireless Mice.
+- Certificates:  INR (certificate); max=1; sponsor=Geek Room; All participants will receive a certificate in recognition of their effort and involvement
+- N8N Cloud Pro Licenses: 60 USD (credits); max=100; sponsor=N8N; 
+- CC 6.0 General 2nd Prize: 10000 INR (cash); max=1; sponsor=Geek Room; Awarded for the second prize of the general problem statement winners.
+- CC 6.0 General 3rd Prize: 8000 INR (cash); max=1; sponsor=Geek Room; Awarded for the third prize of the general problem statement winners.
+
+FAQ
+Q: Can I participate individually?
+A: Yes, you can participate individually or with a team of 4.
+Q: Who can participate in the hackathon?
+A: Students, engineers, developers, AI builders, working professionals, and anyone interested in building solutions can participate.
+Q: How will teams be selected for the Project Submission round?
+A: Teams will be selected based on the overall GitHub and LinkedIn profiles of the team members.
+Q: Where will the Final Round take place?
+A: The Final Round will be held offline at Paytm Office, Noida on 11 October 2026.
+
+CONTACT
+{"name": "Manas Chopra", "email": "team.geekroom@gmail.com", "phone": "", "website": "", "role": "Co-Founder, Geek Room"}
+
+ANNOUNCEMENTS (title/date only)
+- 2026-08-31T05:41:19.857000Z | Join the Code Cubicle 6.0 Participants Group
+- 2026-09-01T07:53:51.323000Z | Join the Code Cubicle 6.0 Participants Group
+- 2026-09-03T04:45:15.495000Z | Code Cubicle 6.0 - Important Participant Updates
+- 2026-09-03T18:23:18.018000Z | Your Code Cubicle 6.0 Premium Pass Is Here
+- 2026-09-03T19:41:16.322000Z | Action Required: Update Your Code Cubicle 6.0 Profile
+- 2026-09-04T12:44:01.492000Z | Important: Update Your Profile + Get Your Code Cubicle 6.0 Premium Pass
+- 2026-09-06T01:54:33.814000Z | Important: Update Your Profile + Get Your Code Cubicle 6.0 Premium Pass
+- 2026-09-07T16:40:58.838000Z | Important: Update Your Profile + Join the official Group
+- 2026-09-10T11:07:20.474000Z | Important: Join the official Code Cubicle 6.0 Group
+- 2026-09-10T15:02:56.928000Z | Mandatory 2-Minute Task: Complete Before 14 September
+- 2026-09-12T05:05:38.572000Z | Important: Please Refill Your Profile Form
+- 2026-09-13T09:33:31.523000Z | Action Required: Profile Form + WhatsApp Group
+- 2026-09-13T09:36:39.639000Z | Important: New Code Cubicle 6.0 WhatsApp Group
+- 2026-09-15T08:09:54.506000Z | Important: Shortlisting Begins Today | Profile Form Is Mandatory
+- 2026-09-16T08:28:28.937000Z | Code Cubicle 6.0: Online Round Shortlist Announced
+
+LATEST ANNOUNCEMENT
+Code Cubicle 6.0: Online Round Shortlist Announced
+Hi Participants,
+
+We’re excited to share that we have now shortlisted around 400 teams for the Online Round of Code Cubicle 6.0.
+
+These are the final teams selected as of now. We may open additional slots and select more teams if required, but for the current stage, this is the shortlist we’re proceeding with.
+
+How did we select the teams?
+
+We wanted to keep the selection process as transparent and consistent as possible.
+
+For this round, we decided to use GitHub as the primary and only evaluation source. While we initially considered other platforms such as LinkedIn, we found that LinkedIn activity varied significantly across participants and did not provide a consistent basis for evaluating student developers. Some participants may have limited or no activity on LinkedIn despite being active builders.
+
+GitHub, on the other hand, is where developers typically showcase their code, projects, contributions, and technical work. Therefore, to maintain a consistent evaluation methodology across all participants, we based the shortlist entirely on publicly available GitHub information.
+
+The evaluation considered factors such as:
+* Contributions over the last year
+* Recent GitHub activity
+* Recently pushed repositories
+* README presence and documentation
+* Repository descriptions
+* Stars and forks
+* Programming language breadth
+* Public profile activity
+* Overall evidence of project work
+* Team composition and depth
+
+For team scoring, we considered the strength of the strongest member, the top two members, and the overall team average, rather than simply rewarding larger teams.
+
+Please also keep in mind that a GitHub-based evaluation cannot capture everything a developer has done. Private contributions, internships, research, hackathon achievements, or work outside GitHub may not be visible through this methodology. We therefore did not make assumptions about achievements that could not be verified through the available GitHub data.
+
+Selection Methodology & Results:
+We’re sharing the results sheet along with the methodology used for the evaluation so that the process is as transparent as possible:
+
+Results + Methodology:
+https://docs.google.com/spreadsheets/d/1nxZF2XUeYhFqIMxV8Y6eIvINZ0G4Zr5RYQ9h0-pqO34/edit?usp=sharing
+
+A request regarding individual requests:
+
+We understand that some participants may have questions about their selection. However, we request that you please do not DM the team asking for reconsideration, manual selection, or individual profile reviews.
+
+We simply don’t have the bandwidth to handle individual selection requests, and making exceptions would also make it difficult to maintain a consistent process for everyone.
+
+We’ve tried to make the methodology as transparent as possible and have shared the basis on which the selections were made.
+
+What happens next?
+If your team has been shortlisted, you will soon receive a separate email with details about the dedicated Online Round participants group. Please keep an eye on your inbox and make sure you join the group once you receive the invitation.
+
+We’ll also share the problem statements and further Online Round instructions soon.
+
+For those who have been selected - congratulations, and we’ll see you in the Online Round.
+
+For everyone else, thank you for participating and for being part of Code Cubicle 6.0. We genuinely appreciate the interest and effort from everyone who registered.
+
+Best,
+Team Geek Room
+
+LINKS
+{
+  "website": null,
+  "twitter": null,
+  "linkedin": "https://www.linkedin.com/company/geekr00m/",
+  "discord": null,
+  "slack": null,
+  "telegram": null,
+  "facebook": null,
+  "instagram": "https://www.instagram.com/geekroom__/"
+}
+
+FLAGS
+{
+  "hackathons": true,
+  "challenges": true,
+  "multi_phase": true,
+  "exports": true,
+  "assessments": true,
+  "team_directory": false,
+  "ai_judging": false
+}

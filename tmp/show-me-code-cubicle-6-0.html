@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code Cubicle 6.0 | Problem Statement Map</title>
+  <style>
+    :root {
+      --ink: #f5f4ef;
+      --muted: #a8b2c4;
+      --bg: #0b1020;
+      --panel: #121a2d;
+      --panel-2: #17223a;
+      --line: #2b3a58;
+      --cyan: #6ee7f2;
+      --lime: #c7f36b;
+      --orange: #ffad66;
+      --pink: #ff8fb1;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 86% 0%, rgba(110, 231, 242, .12), transparent 30rem),
+        radial-gradient(circle at 0% 30%, rgba(199, 243, 107, .08), transparent 28rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    .shell { max-width: var(--max); margin: 0 auto; padding: 28px 22px 64px; }
+    .eyebrow, .tag, .step-label, .source-label {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 11px;
+    }
+    .eyebrow { color: var(--cyan); }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      color: var(--lime);
+      border: 1px solid rgba(199, 243, 107, .35);
+      border-radius: 999px;
+      background: rgba(199, 243, 107, .08);
+    }
+    .tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); }
+    header { padding: 20px 0 54px; }
+    .topline { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { max-width: 850px; margin-top: 28px; font-size: clamp(42px, 8vw, 92px); line-height: .93; letter-spacing: -.065em; }
+    h1 span { color: var(--cyan); }
+    .lede { max-width: 760px; margin-top: 25px; color: var(--muted); font-size: clamp(17px, 2vw, 21px); }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 18px; margin-top: 42px; }
+    .hero-card, .card, .panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(23, 34, 58, .94), rgba(14, 21, 38, .94));
+      border-radius: 20px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, .18);
+    }
+    .hero-card { padding: 26px; min-height: 235px; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-card h2 { max-width: 620px; font-size: clamp(24px, 3vw, 39px); line-height: 1.04; letter-spacing: -.04em; }
+    .hero-card h2 em { color: var(--lime); font-style: normal; }
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 30px; }
+    .metric { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(11, 16, 32, .5); }
+    .metric strong { display: block; font-size: 24px; letter-spacing: -.04em; }
+    .metric span { color: var(--muted); font-size: 12px; }
+    .hero-note { padding: 26px; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-note strong { font-size: 19px; }
+    .hero-note p { color: var(--muted); font-size: 14px; }
+    .hero-note .signal { color: var(--orange); }
+
+    section { margin-top: 72px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 20px; }
+    .section-head h2 { font-size: clamp(26px, 4vw, 43px); letter-spacing: -.055em; line-height: 1; }
+    .section-head p { max-width: 530px; color: var(--muted); font-size: 14px; }
+
+    .timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .date-card { min-height: 165px; padding: 17px; position: relative; overflow: hidden; }
+    .date-card::after { content: ""; position: absolute; right: -20px; bottom: -38px; width: 100px; height: 100px; border: 1px solid var(--line); border-radius: 50%; }
+    .date-card .date { color: var(--cyan); font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; }
+    .date-card h3 { margin-top: 21px; font-size: 18px; line-height: 1.08; }
+    .date-card p { margin-top: 9px; color: var(--muted); font-size: 12px; }
+    .date-card.current { border-color: rgba(255, 173, 102, .65); background: linear-gradient(145deg, rgba(70, 45, 38, .92), rgba(25, 25, 42, .94)); }
+    .date-card.current .date { color: var(--orange); }
+    .date-card.final { border-color: rgba(199, 243, 107, .55); }
+    .date-card.final .date { color: var(--lime); }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card { padding: 22px; display: flex; flex-direction: column; min-height: 430px; }
+    .card:nth-child(1) { border-top: 3px solid var(--pink); }
+    .card:nth-child(2) { border-top: 3px solid var(--cyan); }
+    .card:nth-child(3) { border-top: 3px solid var(--lime); }
+    .card-index { color: var(--muted); font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; }
+    .card h3 { margin-top: 18px; font-size: 25px; line-height: 1.02; letter-spacing: -.045em; }
+    .card .partner { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .card .big-idea { margin-top: 25px; font-size: 17px; line-height: 1.25; }
+    .card ul { margin: 19px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
+    .card li { display: flex; gap: 9px; margin-top: 9px; }
+    .card li::before { content: "+"; color: var(--lime); font-family: monospace; }
+    .proof { margin-top: auto; padding-top: 22px; border-top: 1px solid var(--line); color: var(--ink); font-size: 12px; }
+    .proof strong { color: var(--orange); }
+
+    .flow-panel { padding: 24px; overflow: hidden; }
+    .flow { display: grid; grid-template-columns: repeat(5, 1fr); align-items: stretch; gap: 0; }
+    .flow-step { min-height: 164px; padding: 18px 15px; border: 1px solid var(--line); background: rgba(11, 16, 32, .54); position: relative; }
+    .flow-step:first-child { border-radius: 15px 0 0 15px; }
+    .flow-step:last-child { border-radius: 0 15px 15px 0; }
+    .flow-step:not(:last-child)::after { content: ">"; position: absolute; z-index: 2; right: -10px; top: 50%; transform: translateY(-50%); width: 19px; height: 25px; display: grid; place-items: center; color: var(--ink); background: var(--panel-2); border: 1px solid var(--line); border-radius: 50%; font-family: monospace; }
+    .flow-step h3 { margin-top: 18px; font-size: 16px; line-height: 1.08; }
+    .flow-step p { margin-top: 9px; color: var(--muted); font-size: 12px; }
+    .step-label { color: var(--cyan); }
+    .branch-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+    .branch { padding: 16px; border: 1px dashed var(--line); border-radius: 14px; }
+    .branch h3 { font-size: 14px; }
+    .branch p { margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .branch:nth-child(1) { border-color: rgba(255, 143, 177, .5); }
+    .branch:nth-child(2) { border-color: rgba(110, 231, 242, .5); }
+    .branch:nth-child(3) { border-color: rgba(199, 243, 107, .5); }
+
+    .edge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .edge-panel { padding: 23px; }
+    .edge-panel h3 { font-size: 21px; letter-spacing: -.03em; }
+    .edge-panel p { margin-top: 9px; color: var(--muted); font-size: 13px; }
+    .edge-lane { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin-top: 25px; }
+    .node { min-height: 145px; padding: 16px; border: 1px solid var(--line); border-radius: 15px; background: rgba(11, 16, 32, .6); }
+    .node h4 { margin: 0; font-size: 16px; }
+    .node p { margin-top: 8px; font-size: 12px; }
+    .node.edge { border-color: rgba(199, 243, 107, .6); }
+    .node.cloud { border-color: rgba(110, 231, 242, .6); }
+    .connector { color: var(--orange); font-family: monospace; font-size: 24px; }
+    .edge-panel ul { margin: 20px 0 0; padding-left: 18px; color: var(--muted); font-size: 13px; }
+    .edge-panel li { margin-top: 7px; }
+    .edge-panel li::marker { color: var(--lime); }
+    .guardrail { padding: 23px; border-color: rgba(255, 173, 102, .55); }
+    .guardrail h3 { color: var(--orange); }
+    .checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
+    .check { padding: 13px; border: 1px solid var(--line); border-radius: 12px; color: var(--muted); font-size: 12px; }
+    .check strong { display: block; color: var(--ink); margin-bottom: 4px; }
+
+    .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .takeaway { padding: 23px; }
+    .takeaway h3 { font-size: 20px; }
+    .takeaway ol { margin: 18px 0 0; padding-left: 21px; color: var(--muted); font-size: 14px; }
+    .takeaway li { margin-top: 10px; padding-left: 3px; }
+    .takeaway li::marker { color: var(--orange); font-family: monospace; }
+    .caveat { padding: 23px; border-color: rgba(255, 173, 102, .55); }
+    .caveat h3 { color: var(--orange); font-size: 20px; }
+    .caveat p { margin-top: 12px; color: var(--muted); font-size: 14px; }
+    .caveat strong { color: var(--ink); }
+    footer { margin-top: 38px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    footer p + p { margin-top: 7px; }
+    a { color: var(--cyan); }
+
+    @media (max-width: 900px) {
+      .hero-grid, .edge-grid, .bottom { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: repeat(3, 1fr); }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
+      .flow { grid-template-columns: 1fr; gap: 8px; }
+      .flow-step, .flow-step:first-child, .flow-step:last-child { min-height: 0; border-radius: 12px; }
+      .flow-step:not(:last-child)::after { content: "v"; right: 50%; top: auto; bottom: -15px; transform: translateX(50%); }
+    }
+    @media (max-width: 620px) {
+      .shell { padding: 18px 14px 45px; }
+      .topline, .section-head { align-items: flex-start; flex-direction: column; }
+      .timeline, .branch-row, .checklist { grid-template-columns: 1fr; }
+      .metric-row { grid-template-columns: 1fr; }
+      .edge-lane { grid-template-columns: 1fr; }
+      .connector { text-align: center; transform: rotate(90deg); }
+      h1 { font-size: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="topline">
+        <div class="eyebrow">Code Cubicle 6.0 / visual brief</div>
+        <div class="tag">Snapshot: 24 Sep 2026</div>
+      </div>
+      <h1>Build past the <span>chatbot.</span></h1>
+      <p class="lede">Three problem tracks ask for one thing in common: turn messy real-world inputs into decisions people can inspect, trust, and act on.</p>
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div>
+            <div class="eyebrow">Theme</div>
+            <h2>AI-Powered Intelligence for the <em>Real World</em></h2>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>3</strong><span>problem tracks</span></div>
+            <div class="metric"><strong>1-4</strong><span>members per team</span></div>
+            <div class="metric"><strong>~15-20</strong><span>teams in final round</span></div>
+          </div>
+        </div>
+        <div class="hero-note panel">
+          <div>
+            <div class="eyebrow">The real test</div>
+            <strong>Do not demo intelligence in isolation.</strong>
+          </div>
+          <p><span class="signal">Show the whole loop:</span> source or signal -> workflow -> validation -> useful action. The strongest teams will make every step observable.</p>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="timeline-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">01 / Event runway</div>
+          <h2 id="timeline-title">From registration to the room.</h2>
+        </div>
+        <p>The official event API was last updated 22 Sep 2026. Times below are shown in India Standard Time unless noted.</p>
+      </div>
+      <div class="timeline">
+        <div class="date-card panel">
+          <div class="date">29 AUG - 20 SEP</div>
+          <h3>Register + form a team</h3>
+          <p>Registration is now closed. Teams may contain 1-4 members.</p>
+        </div>
+        <div class="date-card panel current">
+          <div class="date">16 SEP UPDATE</div>
+          <h3>~400 teams shortlisted</h3>
+          <p>Latest announcement says public GitHub evidence was the primary and only evaluation source for this round.</p>
+        </div>
+        <div class="date-card panel current">
+          <div class="date">30 SEP / 23:59 IST</div>
+          <h3>Project submission</h3>
+          <p>GitHub project link required. Demo video and PPT are optional in the event API.</p>
+        </div>
+        <div class="date-card panel">
+          <div class="date">03 OCT</div>
+          <h3>Online round</h3>
+          <p>The problem PDF labels this milestone "3 OCT ONLINE." Confirm the exact slot with the organizer.</p>
+        </div>
+        <div class="date-card panel final">
+          <div class="date">11 OCT / 09:00-18:00 IST</div>
+          <h3>Offline final</h3>
+          <p>Paytm, One Skymark, Tower-D, Sector 98, Noida. Top 3 are selected.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="tracks-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">02 / The three briefs</div>
+          <h2 id="tracks-title">Choose the evidence you can own.</h2>
+        </div>
+        <p>Each statement is a product brief disguised as a feature list. The differentiator is the managed workflow around the model.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-index">PROBLEM 01 / DATA</div>
+          <h3>AI-Powered Data Intelligence Platform</h3>
+          <div class="partner">No named track sponsor in the PDF</div>
+          <p class="big-idea">A business user types a data need. The system plans, runs, checks, and explains the collection workflow.</p>
+          <ul>
+            <li>Plain-English request understanding</li>
+            <li>Permitted-source collection and workflow execution</li>
+            <li>Cleaning, structuring, validation, deduplication</li>
+            <li>Traceable sources, history, search, export</li>
+          </ul>
+          <div class="proof"><strong>Proof to show:</strong> one live request becomes a reproducible, inspectable dataset.</div>
+        </article>
+        <article class="card">
+          <div class="card-index">PROBLEM 02 / MEDIA / CLOUDINARY</div>
+          <h3>AI-Powered Impact &amp; Sustainability Media Platform</h3>
+          <div class="partner">Track sponsor: Cloudinary</div>
+          <p class="big-idea">Turn field photos and videos into organized evidence, measurable change, and campaign-ready stories.</p>
+          <ul>
+            <li>Project, location, and timeline organization</li>
+            <li>Activity and visual-signal detection</li>
+            <li>Before-and-after comparison</li>
+            <li>Metadata, semantic search, visual reports</li>
+          </ul>
+          <div class="proof"><strong>Proof to show:</strong> raw media becomes a visual evidence trail, not just a gallery.</div>
+        </article>
+        <article class="card">
+          <div class="card-index">PROBLEM 03 / EDGE / QDRANT</div>
+          <h3>AI-Powered Edge Memory &amp; Intelligence Platform</h3>
+          <div class="partner">Technology partner: Qdrant</div>
+          <p class="big-idea">Keep useful memory and fast retrieval on-device, then synchronize intelligently when the network returns.</p>
+          <ul>
+            <li>Offline vector and hybrid search</li>
+            <li>Local/cloud placement decisions</li>
+            <li>Intermittent connectivity and conflict handling</li>
+            <li>Memory, search, sync, and activity UI</li>
+          </ul>
+          <div class="proof"><strong>Proof to show:</strong> meaningful edge-to-cloud reasoning, not a local vector database demo.</div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="loop-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">03 / Shared product loop</div>
+          <h2 id="loop-title">The model is only one part of the score.</h2>
+        </div>
+        <p>Use this architecture lens to pressure-test any track before choosing a stack.</p>
+      </div>
+      <div class="flow-panel panel">
+        <div class="flow">
+          <div class="flow-step">
+            <div class="step-label">01 / Intent</div>
+            <h3>User or field signal</h3>
+            <p>A question, a permitted source, a photo/video, or an edge event.</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-label">02 / Orchestrate</div>
+            <h3>Plan the work</h3>
+            <p>Break the request into bounded jobs with permissions, retries, and status.</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-label">03 / Ground</div>
+            <h3>Build evidence</h3>
+            <p>Collect, transform, index, or synchronize while retaining provenance.</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-label">04 / Reason</div>
+            <h3>Validate the answer</h3>
+            <p>Clean, compare, tag, deduplicate, resolve conflicts, and show confidence.</p>
+          </div>
+          <div class="flow-step">
+            <div class="step-label">05 / Act</div>
+            <h3>Make it useful</h3>
+            <p>Dashboard, report, search, export, or offline decision with an audit trail.</p>
+          </div>
+        </div>
+        <div class="branch-row">
+          <div class="branch"><h3>Data track</h3><p>Permitted sources -> clean rows -> source-backed decisions.</p></div>
+          <div class="branch"><h3>Media track</h3><p>Original assets -> tagged evidence -> visual impact story.</p></div>
+          <div class="branch"><h3>Edge track</h3><p>Local memory -> reasoned sync -> cloud knowledge when available.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="edge-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">04 / Edge-specific reading</div>
+          <h2 id="edge-title">Qdrant Edge is a behavior, not a badge.</h2>
+        </div>
+        <p>The statement explicitly rejects "just run a local vector database." Show what the system knows, what it sends, and what it does when both copies disagree.</p>
+      </div>
+      <div class="edge-grid">
+        <div class="edge-panel panel">
+          <h3>Offline-first memory loop</h3>
+          <p>A believable edge demo has two states and a visible transition between them.</p>
+          <div class="edge-lane">
+            <div class="node edge">
+              <div class="step-label">On device</div>
+              <h4>Qdrant Edge</h4>
+              <p>Local semantic memory, vector + hybrid retrieval, privacy-sensitive context, activity log.</p>
+            </div>
+            <div class="connector">&lt;-&gt;</div>
+            <div class="node cloud">
+              <div class="step-label">When online</div>
+              <h4>Qdrant Server</h4>
+              <p>Relevant knowledge sync, cross-device context, conflict resolution, and audit history.</p>
+            </div>
+          </div>
+          <ul>
+            <li>Pull the network cable in the demo; local search still succeeds.</li>
+            <li>Show the policy that chooses local-only, sync-now, or defer.</li>
+            <li>Change the same memory on both sides and resolve it explicitly.</li>
+          </ul>
+        </div>
+        <div class="edge-panel panel guardrail">
+          <h3>What judges can verify</h3>
+          <div class="checklist">
+            <div class="check"><strong>Latency</strong>Local search without a network round trip.</div>
+            <div class="check"><strong>Resilience</strong>Work continues through intermittent connectivity.</div>
+            <div class="check"><strong>Privacy</strong>Raw sensitive data can stay local while useful context syncs.</div>
+            <div class="check"><strong>Reasoning</strong>Sync decisions are explainable, not arbitrary.</div>
+            <div class="check"><strong>Observability</strong>Memory, results, status, and activity are inspectable.</div>
+            <div class="check"><strong>Traceability</strong>Updates and conflicts leave an audit trail.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="strategy-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">05 / Build advice</div>
+          <h2 id="strategy-title">A small, auditable slice beats a huge claim.</h2>
+        </div>
+        <p>Pick one user, one repeatable workflow, and one measurable outcome. Depth with evidence is more persuasive than breadth.</p>
+      </div>
+      <div class="bottom">
+        <div class="takeaway panel">
+          <h3>Recommended demo sequence</h3>
+          <ol>
+            <li>State the user and the painful decision they need to make.</li>
+            <li>Run the happy path with real or realistic permitted inputs.</li>
+            <li>Open the evidence drawer: source, timestamp, transformation, confidence.</li>
+            <li>Break one assumption: duplicate, conflict, poor media, or lost network.</li>
+            <li>Show the resulting action, report, export, or recovered offline answer.</li>
+          </ol>
+        </div>
+        <div class="takeaway panel caveat">
+          <h3>Date and source caveat</h3>
+          <p><strong>30 Sep 2026, 23:59 IST</strong> is the event API's structured project-submission cutoff. The PDF says <strong>3 Oct Online</strong>. Treat 3 Oct as the online-round milestone unless Geek Room clarifies otherwise.</p>
+          <p>The general FAQ mentions GitHub and LinkedIn, but the <strong>16 Sep shortlist announcement</strong> says public GitHub information was the primary and only source for that round. Follow the latest announcement and organizer instructions.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><span class="source-label">Sources</span> Code Cubicle 6.0 Problem Statements PDF; official HackCulture event page and API snapshot (updated 22 Sep 2026).</p>
+      <p>Event: Geek Room | Hybrid | Paytm, Noida | 1-4 members per team | Registration closed | Winners not announced.</p>
+    </footer>
+  </main>
+</body>
+</html>

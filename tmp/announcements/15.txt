@@ -1,0 +1,59 @@
+created_at: 2026-09-16T08:28:28.937000Z
+
+title: Code Cubicle 6.0: Online Round Shortlist Announced
+
+description: Hi Participants,
+
+We’re excited to share that we have now shortlisted around 400 teams for the Online Round of Code Cubicle 6.0.
+
+These are the final teams selected as of now. We may open additional slots and select more teams if required, but for the current stage, this is the shortlist we’re proceeding with.
+
+How did we select the teams?
+
+We wanted to keep the selection process as transparent and consistent as possible.
+
+For this round, we decided to use GitHub as the primary and only evaluation source. While we initially considered other platforms such as LinkedIn, we found that LinkedIn activity varied significantly across participants and did not provide a consistent basis for evaluating student developers. Some participants may have limited or no activity on LinkedIn despite being active builders.
+
+GitHub, on the other hand, is where developers typically showcase their code, projects, contributions, and technical work. Therefore, to maintain a consistent evaluation methodology across all participants, we based the shortlist entirely on publicly available GitHub information.
+
+The evaluation considered factors such as:
+* Contributions over the last year
+* Recent GitHub activity
+* Recently pushed repositories
+* README presence and documentation
+* Repository descriptions
+* Stars and forks
+* Programming language breadth
+* Public profile activity
+* Overall evidence of project work
+* Team composition and depth
+
+For team scoring, we considered the strength of the strongest member, the top two members, and the overall team average, rather than simply rewarding larger teams.
+
+Please also keep in mind that a GitHub-based evaluation cannot capture everything a developer has done. Private contributions, internships, research, hackathon achievements, or work outside GitHub may not be visible through this methodology. We therefore did not make assumptions about achievements that could not be verified through the available GitHub data.
+
+Selection Methodology & Results:
+We’re sharing the results sheet along with the methodology used for the evaluation so that the process is as transparent as possible:
+
+Results + Methodology:
+https://docs.google.com/spreadsheets/d/1nxZF2XUeYhFqIMxV8Y6eIvINZ0G4Zr5RYQ9h0-pqO34/edit?usp=sharing
+
+A request regarding individual requests:
+
+We understand that some participants may have questions about their selection. However, we request that you please do not DM the team asking for reconsideration, manual selection, or individual profile reviews.
+
+We simply don’t have the bandwidth to handle individual selection requests, and making exceptions would also make it difficult to maintain a consistent process for everyone.
+
+We’ve tried to make the methodology as transparent as possible and have shared the basis on which the selections were made.
+
+What happens next?
+If your team has been shortlisted, you will soon receive a separate email with details about the dedicated Online Round participants group. Please keep an eye on your inbox and make sure you join the group once you receive the invitation.
+
+We’ll also share the problem statements and further Online Round instructions soon.
+
+For those who have been selected - congratulations, and we’ll see you in the Online Round.
+
+For everyone else, thank you for participating and for being part of Code Cubicle 6.0. We genuinely appreciate the interest and effort from everyone who registered.
+
+Best,
+Team Geek Room

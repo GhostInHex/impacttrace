@@ -1,0 +1,27 @@
+PROBLEM STATEMENT 02 · CLOUDINARY
+AI-Powered Impact &
+Sustainability Media Platform
+NGOs, governments, and sustainability organizations generate large volumes of photos and videos from field
+projects, environmental initiatives, infrastructure work, and community programs. Manually organizing, analyzing,
+verifying, and turning this media into meaningful evidence and reports is time-consuming and difficult to scale.
+The challenge is to build an AI-powered media intelligence platform using Cloudinary that can understand field
+media, organize evidence by project, location, and timeline, and help teams turn visual data into reliable insights and
+impact stories.
+GOAL
+Build a complete platform that can:
+/ Analyze and intelligently organize large collections of
+image and video evidence.
+/ Identify relevant projects, activities, locations, and
+visual signals from media.
+/ Compare before-and-after media to demonstrate
+visible project or environmental changes.
+/ Generate visual reports, summaries, and campaign-
+ready content from collected evidence.
+/ Make media searchable through AI-powered metadata,
+tagging, and semantic discovery.
+/ Preserve traceability to the original source assets and
+transformations.
+EXPECTED OUTCOME
+A scalable media intelligence product that transforms raw field media into searchable evidence, measurable
+impact, and compelling visual stories.
+3 OCT ONLINE · 11 OCT OFFLINE 02 / 03

@@ -1,0 +1,11 @@
+created_at: 2026-09-03T19:41:16.322000Z
+
+title: Action Required: Update Your Code Cubicle 6.0 Profile
+
+description: Hey guys,
+
+We’re releasing a Profile Submission Form for Code Cubicle 6.0 because we noticed that several participants have either entered incorrect profile information or missed important details such as their college/company name while trying to shortlist.
+
+We request everyone to please fill out this form with accurate and authentic information. This information will be used while reviewing profiles for the online round, so please make sure everything is correct: https://forms.gle/bz39sAHUfM4gLEyL6
+
+Please treat this as your official profile record and double-check all the details before submitting.
