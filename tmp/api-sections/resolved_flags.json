@@ -1,9 +1,0 @@
-{
-  "hackathons": true,
-  "challenges": true,
-  "multi_phase": true,
-  "exports": true,
-  "assessments": true,
-  "team_directory": false,
-  "ai_judging": false
-}
