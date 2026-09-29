@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Demo media contact sheet</title>
+<style>
+  body { font: 14px system-ui, sans-serif; margin: 0; padding: 16px; background: #fafafa; }
+  h2 { font-size: 15px; margin: 20px 0 8px; text-transform: uppercase; letter-spacing: .06em; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  figure { margin: 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+  img { width: 100%; height: 150px; object-fit: cover; display: block; }
+  figcaption { font-size: 11px; padding: 5px 7px; color: #444; }
+</style></head>
+<body>
+<script>
+const groups = ["tree-plantation","water-conservation","infrastructure"];
+for (const g of groups) {
+  document.write(`<h2>${g}</h2><div class="grid">`);
+  for (let i = 1; i <= 8; i++) {
+    const n = String(i).padStart(2,"0");
+    document.write(`<figure><img src="/demo/${g}/${g}-${n}.jpg"><figcaption>${g}-${n}</figcaption></figure>`);
+  }
+  document.write(`</div>`);
+}
+</script>
+</body></html>

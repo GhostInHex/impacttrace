@@ -1,7 +1,17 @@
 import { NextResponse } from "next/server";
 import type { ReportRequest } from "@/features/report/report";
+import { recordRateLimit, recordSuccess } from "@/lib/provider-status";
 
 export const runtime = "nodejs";
+
+/**
+ * Verified against the live OpenRouter API: this free model answers in ~2s with
+ * a 1M-token context window, which suits a long evidence-bound report. The
+ * report is Markdown, so it does not need JSON mode.
+ */
+const DEFAULT_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free";
+const FALLBACK_MODEL = "nvidia/nemotron-3-super-120b-a12b:free";
+const OPENROUTER_TIMEOUT_MS = 60_000;
 
 const requiredSections = [
   "## Summary",
@@ -125,67 +135,98 @@ export async function POST(request: Request) {
     });
   }
 
-  const model = process.env.OPENROUTER_REPORT_MODEL ?? "openai/gpt-4o";
+  const configured = process.env.OPENROUTER_REPORT_MODEL;
+  // The free pool intermittently returns HTTP 200 with an empty completion, so
+  // a second model is tried once before surfacing an error.
+  const models = Array.from(
+    new Set([configured ?? DEFAULT_MODEL, configured ? FALLBACK_MODEL : DEFAULT_MODEL]),
+  );
   const systemPrompt = `You write concise, evidence-bound impact reports in Markdown. Use exactly these headings: ${requiredSections.join(", ")}. Never invent outcomes, dates, locations, or evidence. If a section has no reviewed evidence, write "Not enough evidence". Treat suggested items as uncertain, and never expose provider errors or raw model output.`;
-  let response: Response;
 
-  try {
-    response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
-        "X-Title": "Code Cubicle Impact Report",
-      },
-      body: JSON.stringify({
-        model,
-        temperature: 0.2,
-        messages: [
-          { role: "system", content: systemPrompt },
-          { role: "user", content: JSON.stringify(body) },
-        ],
-      }),
-    });
-  } catch {
-    return NextResponse.json(
-      {
-        error: {
-          code: "openrouter_unavailable",
-          message: "The report service could not be reached. Your previous report is safe; try again later.",
+  let content = "";
+  let lastFailure: "network" | "http" | "empty" = "empty";
+  let httpStatus = 502;
+
+  for (const model of models) {
+    let response: Response;
+    try {
+      response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+          "X-Title": "Code Cubicle Impact Report",
         },
-      },
-      { status: 502 },
-    );
+        body: JSON.stringify({
+          model,
+          temperature: 0.2,
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: JSON.stringify(body) },
+          ],
+        }),
+        signal: AbortSignal.timeout(OPENROUTER_TIMEOUT_MS),
+      });
+    } catch {
+      // A timeout or network blip may still be served by the other model.
+      lastFailure = "network";
+      continue;
+    }
+
+    if (!response.ok) {
+      // An auth failure is account-wide and will not improve on the other
+      // model; a rate limit or transient error might.
+      lastFailure = "http";
+      httpStatus = response.status;
+      if (httpStatus === 429) recordRateLimit(model);
+      if (httpStatus === 401 || httpStatus === 403) break;
+      continue;
+    }
+
+    const payload = (await response.json().catch(() => null)) as
+      | { choices?: Array<{ message?: { content?: unknown } }> }
+      | null;
+
+    content = getModelContent(payload?.choices?.[0]?.message?.content).trim();
+    if (content) {
+      recordSuccess(model);
+      break;
+    }
+    lastFailure = "empty";
   }
-
-  const payload = (await response.json().catch(() => null)) as
-    | { choices?: Array<{ message?: { content?: unknown } }> }
-    | null;
-
-  if (!response.ok) {
-    return NextResponse.json(
-      {
-        error: {
-          code: getErrorCode(response.status),
-          message:
-            response.status === 429
-              ? "The report service is rate limited. Your previous report is safe; try again later."
-              : "The report service could not complete this request. Your previous report is safe; try again later.",
-        },
-      },
-      { status: response.status },
-    );
-  }
-
-  const content = getModelContent(payload?.choices?.[0]?.message?.content).trim();
 
   if (!content) {
+    if (lastFailure === "network") {
+      return NextResponse.json(
+        {
+          error: {
+            code: "openrouter_unavailable",
+            message: "The report service could not be reached. Your previous report is safe; try again later.",
+          },
+        },
+        { status: 502 },
+      );
+    }
+    if (lastFailure === "http") {
+      return NextResponse.json(
+        {
+          error: {
+            code: getErrorCode(httpStatus),
+            message:
+              httpStatus === 429
+                ? "The report service is rate limited. Your previous report is safe; try again later."
+                : "The report service could not complete this request. Your previous report is safe; try again later.",
+          },
+        },
+        { status: httpStatus },
+      );
+    }
     return NextResponse.json(
       {
         error: {
           code: "empty_report",
-          message: "The report service returned no report. Your previous report is safe; no retry was sent.",
+          message: "The report service returned no report on either model. Your previous report is safe; no further request was sent.",
         },
       },
       { status: 502 },

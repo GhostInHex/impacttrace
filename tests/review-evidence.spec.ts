@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { stubOrganizer } from "./helpers/stub-ai";
 
 async function createOrganizedProject(page: Page, name: string) {
   await page.goto("/");
@@ -19,6 +20,7 @@ async function createOrganizedProject(page: Page, name: string) {
 }
 
 test("coordinator can confirm, reject, and edit review suggestions", async ({ page }) => {
+  await stubOrganizer(page);
   await createOrganizedProject(page, "Reviewable Field Journal");
 
   await expect(page.getByText("Review media tags")).toBeVisible();

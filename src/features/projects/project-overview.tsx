@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ProjectHeader } from "@/features/projects/project-header";
+import { ProviderBanner } from "@/features/projects/provider-banner";
 import {
   formatProjectDate,
   getProjectCategoryLabel,
@@ -102,6 +103,9 @@ export function ProjectOverview({ projectId }: { projectId: string }) {
             <Separator className="my-7" />
 
             <div className="print-hidden">
+              <div className="mb-5">
+                <ProviderBanner />
+              </div>
               <nav aria-label="Project workflow" className="flex flex-wrap gap-2">
                 {([
                   ["media", "1. Media journal"],

@@ -1,0 +1,226 @@
+{
+  "note": "Demo media from Wikimedia Commons, reused under the licence listed per file. Replace with consented field media before any funder or community presentation.",
+  "source": "https://commons.wikimedia.org",
+  "scenarios": {
+    "tree-plantation": [
+      {
+        "title": "File:John Rusek memorial tree planting group 2008.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0b/John_Rusek_memorial_tree_planting_group_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:John_Rusek_memorial_tree_planting_group_2008.jpg",
+        "license": "Public domain",
+        "author": "Scott Haines for Ristesson",
+        "credit": "This image comes from the Southerly Clubs of Stockholm, Sweden, a non-profit society which owns image publication rights to the archives of Lars Jacob Prod, Mimical Productions, F.U.S.I.A., Swenglistic Underground (formerly CabarEng), Ristesson Ent and FamSAC. Southerly Clubs donated this picture to the Public Domain. Deputy Chairman Emil Eikner for the Board of Directors, Hallowe'en 2008. .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}This work is free and may be used by anyone for any purpose. If you wish to use this content, you do not need to request permission as long as you follow any licensing requirements mentioned on this page. The Wikimedia Foundation has received an e-mail confirming that the copyright holder has approved publication under the terms mentioned on this page. This correspondence has been reviewed by a Volunteer Response Team (VRT) member and stored in our permission archive. The correspondence is available to trusted volunteers as ticket #2010092510008875. If you have questions about the archived correspondence, please use the VRT noticeboard. Ticket link: https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2010092510008875 Find other files from the same ticket:",
+        "file": "/demo/tree-plantation/tree-plantation-01.jpg"
+      },
+      {
+        "title": "File:Tree Planting in Bagmane Tech Park Lake.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/54/Tree_Planting_in_Bagmane_Tech_Park_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Tree_Planting_in_Bagmane_Tech_Park_Lake.jpg",
+        "license": "CC BY-SA 3.0",
+        "author": "Venkytsv",
+        "credit": "Own work",
+        "file": "/demo/tree-plantation/tree-plantation-02.jpg"
+      },
+      {
+        "title": "File:Volunteers enjoy planting trees.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Volunteers_enjoy_planting_trees.jpg/1920px-Volunteers_enjoy_planting_trees.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Volunteers_enjoy_planting_trees.jpg",
+        "license": "Public domain",
+        "author": "Hillebrand Steve, U.S. Fish and Wildlife Service",
+        "credit": "http://www.public-domain-image.com/public-domain-images-pictures-free-stock-photos/people-public-domain-images-pictures/volunteers-enjoy-planting-trees.jpg",
+        "file": "/demo/tree-plantation/tree-plantation-03.jpg"
+      },
+      {
+        "title": "File:Volunteer Tree Planting 120802-F-OS776-021.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Volunteer_Tree_Planting_120802-F-OS776-021.jpg/1920px-Volunteer_Tree_Planting_120802-F-OS776-021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Volunteer_Tree_Planting_120802-F-OS776-021.jpg",
+        "license": "Public domain",
+        "author": "Airman 1st Class Christopher Tam",
+        "credit": "https://www.dvidshub.net/image/644519",
+        "file": "/demo/tree-plantation/tree-plantation-04.jpg"
+      },
+      {
+        "title": "File:DUSAFO planting trees.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/DUSAFO_planting_trees.jpg/1920px-DUSAFO_planting_trees.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:DUSAFO_planting_trees.jpg",
+        "license": "CC BY-SA 4.0",
+        "author": "Christian Anold Mosha",
+        "credit": "Own work",
+        "file": "/demo/tree-plantation/tree-plantation-05.jpg"
+      },
+      {
+        "title": "File:Dan thanking Chicago Burnham Wildlife Corridor planting volunteers (14148220766).jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Dan_thanking_Chicago_Burnham_Wildlife_Corridor_planting_volunteers_%2814148220766%29.jpg/1920px-Dan_thanking_Chicago_Burnham_Wildlife_Corridor_planting_volunteers_%2814148220766%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Dan_thanking_Chicago_Burnham_Wildlife_Corridor_planting_volunteers_(14148220766).jpg",
+        "license": "Public domain",
+        "author": "U.S. Fish and Wildlife Service Headquarters",
+        "credit": "Dan thanking Chicago Burnham Wildlife Corridor planting volunteers",
+        "file": "/demo/tree-plantation/tree-plantation-06.jpg"
+      },
+      {
+        "title": "File:Chicago Burnham Corridor Volunteers planting (13984713420).jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Chicago_Burnham_Corridor_Volunteers_planting_%2813984713420%29.jpg/1920px-Chicago_Burnham_Corridor_Volunteers_planting_%2813984713420%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Chicago_Burnham_Corridor_Volunteers_planting_(13984713420).jpg",
+        "license": "Public domain",
+        "author": "U.S. Fish and Wildlife Service Headquarters",
+        "credit": "Chicago Burnham Corridor Volunteers planting",
+        "file": "/demo/tree-plantation/tree-plantation-07.jpg"
+      },
+      {
+        "title": "File:AufBuchen planting Schlachtensee Berlin 01 Dec 2024 digging instructions close-up.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/AufBuchen_planting_Schlachtensee_Berlin_01_Dec_2024_digging_instructions_close-up.jpg/1920px-AufBuchen_planting_Schlachtensee_Berlin_01_Dec_2024_digging_instructions_close-up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:AufBuchen_planting_Schlachtensee_Berlin_01_Dec_2024_digging_instructions_close-up.jpg",
+        "license": "CC BY 4.0",
+        "author": "RobbieIanMorrison",
+        "credit": "Own work",
+        "file": "/demo/tree-plantation/tree-plantation-08.jpg"
+      }
+    ],
+    "water-conservation": [
+      {
+        "title": "File:Photograph of a house with a car-decoration on its roof in a rural part of Moga city, Moga tehsil, Moga district, Punjab, India, April 2023.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ceres_rainwater_tank_2_Pengo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Photograph_of_a_house_with_a_car-decoration_on_its_roof_in_a_rural_part_of_Moga_city,_Moga_tehsil,_Moga_district,_Punjab,_India,_April_2023.jpg",
+        "license": "CC BY-SA 4.0",
+        "author": "MaplesyrupSushi",
+        "credit": "No machine-readable source provided. Own work assumed (based on copyright claims).",
+        "file": "/demo/water-conservation/water-conservation-01.jpg"
+      },
+      {
+        "title": "File:Rainwater harvesting tank, India.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Rainwater_harvesting_tank%2C_India.jpg/1920px-Rainwater_harvesting_tank%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Rainwater_harvesting_tank,_India.jpg",
+        "license": "Public domain",
+        "author": "Spiritualfade (talk) 09:37, 23 July 2009 (UTC)",
+        "credit": "I took this pictureTransferred from en.wikipedia",
+        "file": "/demo/water-conservation/water-conservation-02.jpg"
+      },
+      {
+        "title": "File:Variety of water storage tanks and rainwater harvesting equipment (4481563848).jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Variety_of_water_storage_tanks_and_rainwater_harvesting_equipment_%284481563848%29.jpg/1920px-Variety_of_water_storage_tanks_and_rainwater_harvesting_equipment_%284481563848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Variety_of_water_storage_tanks_and_rainwater_harvesting_equipment_(4481563848).jpg",
+        "license": "CC BY 2.0",
+        "author": "SuSanA Secretariat",
+        "credit": "Variety of water storage tanks and rainwater harvesting equipment Uploaded by Elitre",
+        "file": "/demo/water-conservation/water-conservation-03.jpg"
+      },
+      {
+        "title": "File:Crashed rainwater harvesting tank in Morobo (7448930036).jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Crashed_rainwater_harvesting_tank_in_Morobo_%287448930036%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Crashed_rainwater_harvesting_tank_in_Morobo_(7448930036).jpg",
+        "license": "CC BY 2.0",
+        "author": "SuSanA Secretariat",
+        "credit": "https://www.flickr.com/photos/gtzecosan/7448930036/",
+        "file": "/demo/water-conservation/water-conservation-04.jpg"
+      },
+      {
+        "title": "File:A child pumping water.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Opening_the_rainwater_harvesting_tank_%286955943981%29.jpg/1920px-Opening_the_rainwater_harvesting_tank_%286955943981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:A_child_pumping_water.jpg",
+        "license": "CC BY-SA 3.0",
+        "author": "Aronrusewelt",
+        "credit": "https://www.flickr.com/photos/gtzecosan/6955943981/",
+        "file": "/demo/water-conservation/water-conservation-05.jpg"
+      },
+      {
+        "title": "File:Rainwater harvesting tank (5981896147).jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Rainwater_harvesting_tank_%285981896147%29.jpg/1920px-Rainwater_harvesting_tank_%285981896147%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Rainwater_harvesting_tank_(5981896147).jpg",
+        "license": "CC BY 2.0",
+        "author": "SuSanA Secretariat",
+        "credit": "https://www.flickr.com/photos/gtzecosan/5981896147/",
+        "file": "/demo/water-conservation/water-conservation-06.jpg"
+      },
+      {
+        "title": "File:Rainwater harvesting tank to bathing bench (Cambodia) (5601381672).jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Rainwater_harvesting_tank_to_bathing_bench_%28Cambodia%29_%285601381672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Rainwater_harvesting_tank_to_bathing_bench_(Cambodia)_(5601381672).jpg",
+        "license": "CC BY 2.0",
+        "author": "SuSanA Secretariat",
+        "credit": "https://www.flickr.com/photos/gtzecosan/5601381672/",
+        "file": "/demo/water-conservation/water-conservation-07.jpg"
+      },
+      {
+        "title": "File:Golden Gardens Park in Eugene, Oregon 19.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Beijing_Forbidden_City_water_vessel-20071018-RM-150052.jpg/1920px-Beijing_Forbidden_City_water_vessel-20071018-RM-150052.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Golden_Gardens_Park_in_Eugene,_Oregon_19.jpg",
+        "license": "CC BY 2.0",
+        "author": "Rick Obst",
+        "credit": "Own work",
+        "file": "/demo/water-conservation/water-conservation-08.jpg"
+      }
+    ],
+    "infrastructure": [
+      {
+        "title": "File:Photograph of an old and decrepit building in a rural part of Moga city, Moga tehsil, Moga district, Punjab, India, April 2023 01.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Rural_road_construction_%28AM_84542-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page": "https://commons.wikimedia.org/wiki/File:Photograph_of_an_old_and_decrepit_building_in_a_rural_part_of_Moga_city,_Moga_tehsil,_Moga_district,_Punjab,_India,_April_2023_01.jpg",
+        "license": "CC BY-SA 4.0",
+        "author": "MaplesyrupSushi",
+        "credit": "API data Catalogue record Photo",
+        "file": "/demo/infrastructure/infrastructure-01.jpg"
+      },
+      {
+        "title": "File:Construction of a pedestrian steel bridge - Complete View.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Construction_of_a_pedestrian_steel_bridge_-_Complete_View.jpg/1920px-Construction_of_a_pedestrian_steel_bridge_-_Complete_View.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Construction_of_a_pedestrian_steel_bridge_-_Complete_View.jpg",
+        "license": "CC BY-SA 4.0",
+        "author": "Carlos A. Gaviria-Mendoza",
+        "credit": "Own work",
+        "file": "/demo/infrastructure/infrastructure-02.jpg"
+      },
+      {
+        "title": "File:Perumbalam bridge under construction 202312.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Obertiefenbach_Pfarrheim_IMG_3256.JPG/1920px-Obertiefenbach_Pfarrheim_IMG_3256.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Perumbalam_bridge_under_construction_202312.jpg",
+        "license": "CC BY-SA 4.0",
+        "author": "Vis M",
+        "credit": "Self-photographed",
+        "file": "/demo/infrastructure/infrastructure-03.jpg"
+      },
+      {
+        "title": "File:IIT Mandi North Campus under construction May 2016 DSC01772.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Moscow_State_University_crop.jpg/1920px-Moscow_State_University_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:IIT_Mandi_North_Campus_under_construction_May_2016_DSC01772.jpg",
+        "license": "CC BY-SA 4.0",
+        "author": "Timothy Gonsalves",
+        "credit": "Own work",
+        "file": "/demo/infrastructure/infrastructure-04.jpg"
+      },
+      {
+        "file": "/demo/infrastructure/infrastructure-05.jpg",
+        "title": "File:0438Construction of Baliuag Box Culvert 05.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:0438Construction_of_Baliuag_Box_Culvert_05.jpg",
+        "license": "CC0",
+        "author": "JFVelasquez Floro"
+      },
+      {
+        "title": "File:Oxon Hill High School building PG County MD 2022-02-26 12-57-16 1.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Oxon_Hill_High_School_building_PG_County_MD_2022-02-26_12-57-16_1.jpg/1920px-Oxon_Hill_High_School_building_PG_County_MD_2022-02-26_12-57-16_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Oxon_Hill_High_School_building_PG_County_MD_2022-02-26_12-57-16_1.jpg",
+        "license": "CC BY 4.0",
+        "author": "G. Edward Johnson",
+        "credit": "Own work",
+        "file": "/demo/infrastructure/infrastructure-06.jpg"
+      },
+      {
+        "title": "File:Clinica movil.JPG",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Penn_Hills_Senior_High_School_sign_Pittsburgh_PA_2022-10-22_09-33-11.jpg/1920px-Penn_Hills_Senior_High_School_sign_Pittsburgh_PA_2022-10-22_09-33-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Clinica_movil.JPG",
+        "license": "Public domain",
+        "author": "Dalmiro",
+        "credit": "Own work",
+        "file": "/demo/infrastructure/infrastructure-07.jpg"
+      },
+      {
+        "title": "File:Centennial High School entrance Ellicott City MD 2023-04-02 10-01-46.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Centennial_High_School_entrance_Ellicott_City_MD_2023-04-02_10-01-46.jpg/1920px-Centennial_High_School_entrance_Ellicott_City_MD_2023-04-02_10-01-46.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page": "https://commons.wikimedia.org/wiki/File:Centennial_High_School_entrance_Ellicott_City_MD_2023-04-02_10-01-46.jpg",
+        "license": "CC BY 4.0",
+        "author": "G. Edward Johnson",
+        "credit": "Own work",
+        "file": "/demo/infrastructure/infrastructure-08.jpg"
+      }
+    ]
+  }
+}

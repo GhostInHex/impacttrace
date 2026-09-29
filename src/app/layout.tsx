@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Geist } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import { ProjectStoreProvider } from "@/features/projects/project-store-provider";
 
@@ -11,12 +12,21 @@ export const metadata: Metadata = {
   description: "Create and manage traceable sustainability projects.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // Never cap zoom: the layout must survive 200% zoom (WCAG 1.4.4).
+  maximumScale: 5,
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" suppressHydrationWarning className={geist.variable}>
       <body>
-        <ProjectStoreProvider>{children}</ProjectStoreProvider>
-        <Toaster position="top-center" richColors closeButton />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ProjectStoreProvider>{children}</ProjectStoreProvider>
+          <Toaster position="top-center" richColors closeButton />
+        </ThemeProvider>
       </body>
     </html>
   );

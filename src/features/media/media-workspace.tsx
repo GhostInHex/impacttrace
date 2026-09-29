@@ -177,6 +177,13 @@ function AssetCard({
                       {tag}
                     </span>
                   ))
+                ) : analysis.addOnPending ? (
+                  // Video tagging runs asynchronously, so an empty list here is
+                  // not the same as "the model found nothing".
+                  <span className="inline-flex items-center gap-1.5 text-muted-foreground">
+                    <LoaderCircle aria-hidden="true" className="size-3 animate-spin" />
+                    Cloudinary is still analysing this video
+                  </span>
                 ) : (
                   <span className="text-muted-foreground">Not enough evidence</span>
                 )}
@@ -191,7 +198,14 @@ function AssetCard({
                   {analysis.transcript || analysis.ocr}
                 </p>
               </div>
-            ) : null}
+            ) : analysis.addOnPending ? null : (
+              <div>
+                <p className="font-medium text-foreground">
+                  {asset.kind === "video" ? "Transcript signal" : "OCR signal"}
+                </p>
+                <p className="mt-1 leading-5 text-muted-foreground">Not enough evidence</p>
+              </div>
+            )}
             <div className="flex flex-wrap items-center gap-2 border-t pt-3">
               <span className="text-muted-foreground">Confidence</span>
               <span className="font-semibold">{Math.round(analysis.confidence * 100)}%</span>
@@ -208,7 +222,7 @@ function AssetCard({
           href={asset.sourceUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-4 inline-flex max-w-full break-all text-xs font-medium underline underline-offset-4 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="mt-4 -ml-2 inline-flex min-h-11 max-w-full items-center rounded-lg px-2 py-2 text-xs font-medium underline underline-offset-4 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           Open source asset
         </a>
@@ -275,7 +289,10 @@ export function MediaWorkspace({
           provider: "cloudinary",
         },
         source: "cloudinary",
-        error: null,
+        // Say why the analysis is empty instead of implying a model produced it.
+        error: response.aiAnalysisAvailable
+          ? null
+          : "Stored on Cloudinary, but this account has no active subscription for Cloudinary's AI tagging, OCR, or transcription add-ons, so no analysis was returned. Subscribe in the Cloudinary console to enable it.",
       });
     } catch (error) {
       if (isCloudinaryConfigurationError(error)) {

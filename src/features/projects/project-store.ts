@@ -11,6 +11,7 @@ type ProjectStore = {
   projects: Project[];
   hasHydrated: boolean;
   addProject: (project: Project) => void;
+  removeProject: (projectId: string) => void;
   updateProject: (projectId: string, update: (project: Project) => Project) => void;
   addMediaAssets: (projectId: string, assets: MediaAsset[]) => void;
   updateMediaAsset: (projectId: string, assetId: string, update: Partial<MediaAsset>) => void;
@@ -27,6 +28,10 @@ export const useProjectStore = create<ProjectStore>()(
       hasHydrated: false,
       addProject: (project) =>
         set((state) => ({ projects: [project, ...state.projects] })),
+      removeProject: (projectId) =>
+        set((state) => ({
+          projects: state.projects.filter((project) => project.id !== projectId),
+        })),
       updateProject: (projectId, update) =>
         set((state) => ({
           projects: state.projects.map((project) =>

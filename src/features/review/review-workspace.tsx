@@ -198,13 +198,13 @@ function TagReviewCard({ asset, project }: { asset: MediaAsset; project: Project
           const key = getTagReviewKey(asset.id, tag);
           const decision = getReviewDecision(project.review.tags, key);
           return (
-            <div key={key} className="flex items-center gap-1 rounded-full border bg-muted/30 pl-2.5">
+            <div key={key} className="flex items-center gap-0.5 rounded-full border bg-muted/30 pl-2.5 sm:gap-1">
               <span className="text-xs font-medium">{tag}</span>
               <button
                 type="button"
                 onClick={() => setTagDecision(tag, decision === "confirmed" ? "suggested" : "confirmed")}
                 aria-label={`${decision === "confirmed" ? "Unconfirm" : "Confirm"} tag ${tag}`}
-                className={`grid size-6 place-items-center rounded-full text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${decision === "confirmed" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"}`}
+                className={`grid size-8 place-items-center rounded-full text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:size-6 ${decision === "confirmed" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"}`}
               >
                 <Check aria-hidden="true" className="size-3" />
               </button>
@@ -212,7 +212,7 @@ function TagReviewCard({ asset, project }: { asset: MediaAsset; project: Project
                 type="button"
                 onClick={() => setTagDecision(tag, decision === "rejected" ? "suggested" : "rejected")}
                 aria-label={`${decision === "rejected" ? "Restore" : "Reject"} tag ${tag}`}
-                className={`grid size-6 place-items-center rounded-full text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${decision === "rejected" ? "bg-destructive text-white" : "text-muted-foreground hover:bg-muted"}`}
+                className={`grid size-8 place-items-center rounded-full text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:size-6 ${decision === "rejected" ? "bg-destructive text-white" : "text-muted-foreground hover:bg-muted"}`}
               >
                 <X aria-hidden="true" className="size-3" />
               </button>

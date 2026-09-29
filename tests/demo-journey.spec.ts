@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { stubOrganizer, stubReport } from "./helpers/stub-ai";
 
 async function expectNoHorizontalOverflow(page: Page) {
   const hasOverflow = await page.evaluate(
@@ -8,6 +9,8 @@ async function expectNoHorizontalOverflow(page: Page) {
 }
 
 test("tree-plantation demo completes from one-click start to report", async ({ page }) => {
+  await stubOrganizer(page);
+  await stubReport(page);
   await page.setViewportSize({ width: 360, height: 800 });
   await page.goto("/");
   await expect(page.getByText("Start with a sample field journal")).toBeVisible();

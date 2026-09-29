@@ -5,15 +5,18 @@ import {
   rehydrateProjectStore,
   useProjectStore,
 } from "@/features/projects/project-store";
+import { rehydrateIntelStore, useIntelStore } from "@/features/intel/intel-store";
 
 export function ProjectStoreProvider({ children }: { children: ReactNode }) {
   const hasHydrated = useProjectStore((state) => state.hasHydrated);
+  const intelHydrated = useIntelStore((state) => state.hasHydrated);
 
   useEffect(() => {
     rehydrateProjectStore();
+    rehydrateIntelStore();
   }, []);
 
-  if (!hasHydrated) {
+  if (!hasHydrated || !intelHydrated) {
     return (
       <main
         aria-busy="true"
@@ -27,3 +30,4 @@ export function ProjectStoreProvider({ children }: { children: ReactNode }) {
 
   return children;
 }
+

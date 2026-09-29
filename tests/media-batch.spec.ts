@@ -39,7 +39,11 @@ test("sample batch shows per-file media and video transcript signals", async ({
   await page.getByRole("button", { name: "Load sample field journal" }).click();
 
   await expect(page.getByText("8 / 12 assets")).toBeVisible();
-  await expect(page.getByText("field-visit.mp4")).toBeVisible();
+  // The filename shows in the card heading and again in the public ID, so
+  // scope to the heading.
+  await expect(
+    page.getByRole("heading", { name: "field-visit.mp4" }),
+  ).toBeVisible();
   await expect(page.getByText("Transcript signal")).toBeVisible();
   await expect(page.getByText("Review needed").first()).toBeVisible();
 });

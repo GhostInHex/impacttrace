@@ -25,7 +25,7 @@ function renderInlineMarkdown(value: string): ReactNode[] {
     const match = part.match(/^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)$/);
     if (match) {
       return (
-        <a key={`${match[2]}-${index}`} href={match[2]} target="_blank" rel="noreferrer" className="font-medium underline underline-offset-4 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        <a key={`${match[2]}-${index}`} href={match[2]} target="_blank" rel="noreferrer" className="inline font-medium underline underline-offset-4 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
           {match[1]}
         </a>
       );
@@ -94,11 +94,18 @@ function MarkdownReport({ markdown }: { markdown: string }) {
         index += 1;
       }
       blocks.push(
-        <div key={`table-${blocks.length}`} className="my-5 overflow-x-auto rounded-xl border">
-          <table className="w-full min-w-[42rem] border-collapse text-left text-sm">
-            <thead className="bg-muted/60"><tr>{headers.map((header, headerIndex) => <th key={`${header}-${headerIndex}`} className="border-b px-3 py-2.5 font-semibold">{renderInlineMarkdown(header)}</th>)}</tr></thead>
-            <tbody>{rows.map((row, rowIndex) => <tr key={`row-${rowIndex}`} className="border-b last:border-b-0">{headers.map((_, cellIndex) => <td key={`cell-${cellIndex}`} className="px-3 py-2.5 align-top leading-5">{renderInlineMarkdown(row[cellIndex] ?? "")}</td>)}</tr>)}</tbody>
-          </table>
+        <div key={`table-${blocks.length}`} className="my-5">
+          <div className="overflow-x-auto rounded-xl border">
+            <table className="w-full min-w-[42rem] border-collapse text-left text-sm">
+              <thead className="bg-muted/60"><tr>{headers.map((header, headerIndex) => <th key={`${header}-${headerIndex}`} className="border-b px-3 py-2.5 font-semibold">{renderInlineMarkdown(header)}</th>)}</tr></thead>
+              <tbody>{rows.map((row, rowIndex) => <tr key={`row-${rowIndex}`} className="border-b last:border-b-0">{headers.map((_, cellIndex) => <td key={`cell-${cellIndex}`} className="px-3 py-2.5 align-top leading-5">{renderInlineMarkdown(row[cellIndex] ?? "")}</td>)}</tr>)}</tbody>
+            </table>
+          </div>
+          {/* The table scrolls sideways on narrow screens; without this the cut-off
+              column looks like the end of the data. */}
+          <p className="mt-2 text-xs text-muted-foreground sm:hidden">
+            Scroll the table sideways to see every column.
+          </p>
         </div>,
       );
       continue;
@@ -181,7 +188,7 @@ export function ReportWorkspace({ project }: { project: Project }) {
           <div className="mb-6 flex flex-col gap-2 border-b pb-5 sm:flex-row sm:items-center sm:justify-between print:hidden"><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Generated {new Date(project.report.generatedAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}</p><p className="mt-1 text-sm text-muted-foreground">{project.report.source === "demo" ? "Local Markdown fallback" : "OpenRouter Markdown"}</p></div><Button type="button" variant="outline" onClick={() => window.print()}><Printer aria-hidden="true" data-icon="inline-start" />Print / save PDF</Button></div>
           <MarkdownReport markdown={project.report.markdown} />
           <Separator className="my-8" />
-          <details className="print:hidden"><summary className="cursor-pointer text-sm font-medium text-muted-foreground">View Markdown source</summary><pre className="mt-3 max-h-96 overflow-auto whitespace-pre-wrap break-words rounded-xl bg-muted p-4 text-xs leading-5">{project.report.markdown}</pre></details>
+          <details className="print:hidden"><summary className="inline-flex min-h-8 cursor-pointer items-center text-sm font-medium text-muted-foreground">View Markdown source</summary><pre className="mt-3 max-h-96 overflow-auto whitespace-pre-wrap break-words rounded-xl bg-muted p-4 text-xs leading-5">{project.report.markdown}</pre></details>
         </div>
       ) : (
         <div className="mt-8 rounded-2xl border border-dashed bg-muted/20 px-5 py-14 text-center"><FileText aria-hidden="true" className="mx-auto size-8 text-muted-foreground" /><p className="mt-3 font-semibold">No report yet</p><p className="mx-auto mt-1 max-w-md text-sm leading-6 text-muted-foreground">Your report will appear here with a summary, timeline, evidence table, before / after section, recommendations, and source links.</p></div>

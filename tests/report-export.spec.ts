@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { stubOrganizer, stubReport } from "./helpers/stub-ai";
 
 async function createReportProject(page: Page) {
   await page.goto("/");
@@ -24,21 +25,20 @@ async function createReportProject(page: Page) {
 }
 
 test("coordinator generates one complete report and can print it", async ({ page }) => {
+  await stubOrganizer(page);
   await createReportProject(page);
-  let reportRequests = 0;
-  await page.route("/api/report/generate", async (route) => {
-    reportRequests += 1;
-    await route.continue();
-  });
+  // The stub counts the calls so the test can assert exactly one report request
+  // is sent, without ever reaching the live metered OpenRouter API.
+  const reportRequests = await stubReport(page);
 
   await page.getByRole("button", { name: "Generate report" }).click();
   await expect(page.getByTestId("impact-report")).toBeVisible();
   for (const heading of ["Summary", "Timeline", "Evidence table", "Before / after", "Recommendations", "Source links"]) {
     await expect(page.getByRole("heading", { name: heading, exact: true })).toBeVisible();
   }
-  await expect(page.getByTestId("impact-report").getByRole("link", { name: "plot-a-seedling.jpg" }).first()).toBeVisible();
+  await expect(page.getByTestId("impact-report").getByRole("link", { name: "tree-plantation-01.jpg" }).first()).toBeVisible();
   await expect(page.getByText("Not enough evidence", { exact: true }).first()).toBeVisible();
-  expect(reportRequests).toBe(1);
+  expect(reportRequests.count).toBe(1);
 
   await page.evaluate(() => {
     (window as Window & { print: () => void }).print = () => {

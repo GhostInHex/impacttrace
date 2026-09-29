@@ -11,7 +11,15 @@ export type UploadResponse = {
     ocr: string;
     transcript: string;
     confidence: number;
+    /** True when a video add-on is still processing and tags are not back yet. */
+    addOnPending?: boolean;
   };
+  /**
+   * False when the Cloudinary account has no active subscription for the
+   * optional AI add-ons. The asset is still stored; only the analysis is
+   * missing, and the UI must say so rather than imply the model ran.
+   */
+  aiAnalysisAvailable: boolean;
 };
 
 export class MediaApiError extends Error {

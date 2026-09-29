@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { stubOrganizer } from "./helpers/stub-ai";
 
 async function createDemoProject(page: Page, name: string) {
   await page.goto("/");
@@ -15,6 +16,7 @@ async function createDemoProject(page: Page, name: string) {
 }
 
 test("coordinator receives editable evidence organization suggestions", async ({ page }) => {
+  await stubOrganizer(page);
   await createDemoProject(page, "Organized Field Journal");
   await page.getByRole("button", { name: "2. Organize evidence" }).click();
   await page.getByRole("button", { name: "Organize evidence", exact: true }).click();

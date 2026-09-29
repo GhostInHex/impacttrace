@@ -185,6 +185,15 @@
   }
 }
 
+/* A theme flip changes color, background, border and shadow on nearly every
+   element at once. Without this every transition fires together and the swap
+   smears instead of snapping. Set briefly by the theme toggle, then removed. */
+.theme-switching *,
+.theme-switching *::before,
+.theme-switching *::after {
+  transition: none !important;
+}
+
 @media print {
   :root {
     color-scheme: light;
@@ -233,6 +242,11 @@
   }
 
   [data-testid="impact-report"] .overflow-x-auto {
-    overflow: visible;
+    overflow: visible !important;
+  }
+
+  [data-testid="impact-report"] table {
+    min-width: 0 !important;
+    width: 100% !important;
   }
 }

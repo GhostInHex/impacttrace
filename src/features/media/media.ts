@@ -21,6 +21,11 @@ export type MediaAnalysis = {
   transcript: string;
   confidence: number;
   provider: "cloudinary" | "demo" | "local";
+  /**
+   * A video add-on was requested and has not returned yet. Distinct from an
+   * empty tag list, which means the model genuinely found nothing.
+   */
+  addOnPending?: boolean;
 };
 
 export type MediaAsset = {
