@@ -14,11 +14,9 @@ export function ProjectHeader() {
             <Leaf aria-hidden="true" className="size-4" />
           </span>
           <span className="min-w-0">
-            <span className="block truncate text-sm font-semibold">
-              Impact evidence
-            </span>
+            <span className="block truncate text-sm font-semibold">ImpactTrace</span>
             <span className="block truncate text-xs text-muted-foreground">
-              Project workspace
+              Evidence workspace
             </span>
           </span>
         </Link>

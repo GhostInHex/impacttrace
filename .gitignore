@@ -43,3 +43,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Hackathon problem statement extracts (not ours to redistribute)
+problem_explanation_*.pdf

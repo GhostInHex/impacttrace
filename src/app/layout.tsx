@@ -8,8 +8,9 @@ import { ProjectStoreProvider } from "@/features/projects/project-store-provider
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Impact Evidence Workspace",
-  description: "Create and manage traceable sustainability projects.",
+  title: "ImpactTrace",
+  description:
+    "AI evidence workspace for field media and live data. Traceable Cloudinary impact media plus prompt-driven data intelligence.",
 };
 
 export const viewport: Viewport = {

@@ -1,8 +1,8 @@
-# Code Cubicle 6.0 — Cloudinary Impact Media Platform Context
+# ImpactTrace — Code Cubicle 6.0 Context
 
 ## Product purpose
 
-A Cloudinary-powered media intelligence product that helps an NGO project coordinator turn field photos and videos into organized, traceable impact evidence.
+ImpactTrace is a workspace with two surfaces. The primary one is a Cloudinary-powered media intelligence product that helps an NGO project coordinator turn field photos and videos into organized, traceable impact evidence. The second is a prompt-driven data intelligence product that collects source-linked rows from permitted public sources.
 
 ## Glossary
 

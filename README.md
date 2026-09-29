@@ -1,6 +1,19 @@
-# Code Cubicle Impact Evidence MVP
+# ImpactTrace
 
-Code Cubicle is a small Next.js workspace for turning field photos and short videos into traceable sustainability evidence. A coordinator can create a project, upload media, review AI suggestions, organize a timeline, and generate a Markdown impact report that can be printed or saved as a PDF.
+**AI evidence workspace for field media and live data.**
+
+ImpactTrace is a Next.js workspace for turning field photos and short videos into traceable sustainability evidence, and for turning a plain-English request into a source-linked dataset. A coordinator can create a project, upload media, review real Cloudinary AI analysis, organize a timeline, and generate a Markdown impact report that can be printed or saved as a PDF.
+
+Built for [Code Cubicle 6.0](https://hackculture.io/hackathons/code-cubicle-6-0) under the **AI-Powered Impact & Sustainability Media Platform** theme.
+
+## What it does
+
+| Surface | Capability |
+| --- | --- |
+| **Impact Evidence** (Cloudinary) | Real AI tagging, captioning and OCR on upload; evidence grouped by project, location and timeline; before/after comparison; review and confirm; printable impact report. |
+| **Data Intelligence** | Describe data in plain English, the AI plans the query, and rows are collected live from a permitted public source with a working link on every row. Search, filter, sort and export. |
+
+Both surfaces run entirely in the browser. No account, no database.
 
 ## Quick start
 
